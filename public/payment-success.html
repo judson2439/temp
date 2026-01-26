@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful | Summit Land USA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes checkmark {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes circle {
+      0% { stroke-dashoffset: 314; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .checkmark-circle {
+      stroke-dasharray: 314;
+      stroke-dashoffset: 314;
+      animation: circle 0.6s ease-out forwards;
+    }
+    .checkmark-check {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: checkmark 0.4s ease-out 0.4s forwards;
+    }
+    .fade-in {
+      animation: fadeIn 0.6s ease-out 0.6s forwards;
+      opacity: 0;
+    }
+    .fade-in-delay {
+      animation: fadeIn 0.6s ease-out 0.8s forwards;
+      opacity: 0;
+    }
+    .fade-in-delay-2 {
+      animation: fadeIn 0.6s ease-out 1s forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
+    <!-- Animated Checkmark -->
+    <div class="mb-6">
+      <svg class="w-24 h-24 mx-auto" viewBox="0 0 100 100">
+        <circle class="checkmark-circle" cx="50" cy="50" r="45" fill="none" stroke="#27AE60" stroke-width="4"/>
+        <path class="checkmark-check" fill="none" stroke="#27AE60" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M30 50 L45 65 L70 35"/>
+      </svg>
+    </div>
+
+    <!-- Success Message -->
+    <h1 class="text-3xl font-bold text-gray-900 mb-2 fade-in">Payment Successful!</h1>
+    <p class="text-gray-600 mb-6 fade-in">Your property reservation has been confirmed.</p>
+
+    <!-- Order Details -->
+    <div class="bg-gray-50 rounded-lg p-4 mb-6 fade-in-delay">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-gray-600">Reservation Fee</span>
+        <span class="font-semibold text-gray-900">$850.00</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span class="text-gray-600">Status</span>
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+          Confirmed
+        </span>
+      </div>
+    </div>
+
+    <!-- What's Next -->
+    <div class="text-left mb-6 fade-in-delay">
+      <h2 class="font-semibold text-gray-900 mb-3">What happens next?</h2>
+      <ul class="space-y-2 text-sm text-gray-600">
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-[#27AE60] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span>You'll receive a confirmation email with your receipt</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-[#27AE60] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span>Our team will contact you within 24 hours</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-[#27AE60] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          <span>We'll prepare the purchase agreement for your review</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Refund Policy -->
+    <div class="bg-blue-50 border border-blue-100 rounded-lg p-3 mb-6 fade-in-delay-2">
+      <p class="text-sm text-blue-800 flex items-center gap-2">
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Your reservation fee is fully refundable within 48 hours if you change your mind.
+      </p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="space-y-3 fade-in-delay-2">
+      <a href="/" class="block w-full bg-[#27AE60] text-white py-3 px-4 rounded-lg font-semibold hover:bg-[#229954] transition">
+        Return to Home
+      </a>
+      <a href="/buy" class="block w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg font-semibold hover:bg-gray-200 transition">
+        Browse More Properties
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <p class="text-xs text-gray-500 mt-6 fade-in-delay-2">
+      Questions? Contact us at <a href="mailto:support@summitlandusa.com" class="text-[#27AE60] hover:underline">support@summitlandusa.com</a>
+    </p>
+  </div>
+
+  <script>
+    // Get property ID from URL if available
+    const urlParams = new URLSearchParams(window.location.search);
+    const propertyId = urlParams.get('property_id');
+    const sessionId = urlParams.get('session_id');
+    
+    console.log('Payment successful for property:', propertyId);
+    console.log('Stripe session ID:', sessionId);
+  </script>
+</body>
+</html>
