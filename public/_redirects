@@ -1,0 +1,5 @@
+# Serve static payment-success.html for payment success route (MUST be before catch-all)
+/payment-success    /payment-success.html   200
+
+# SPA fallback - serve index.html for all other routes
+/*    /index.html   200
